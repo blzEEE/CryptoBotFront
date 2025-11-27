@@ -1,5 +1,5 @@
 <template>
-    fjfjfj
+  Guest
 </template>
 
 <script setup>
