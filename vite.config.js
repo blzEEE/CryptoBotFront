@@ -11,8 +11,8 @@ export default defineConfig(({ command, mode }) => {
       vue(),
     ],
     build: {
-      outDir: 'public_html',
-      assetsDir: '',
+      outDir: '',
+      assetsDir: '/assets',
       emptyOutDir: true,
     },
     resolve: {
