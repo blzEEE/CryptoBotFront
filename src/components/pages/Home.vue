@@ -1,6 +1,7 @@
 <template>
    {{data}}
   <button @click="send">Send</button>
+  fhfhh
 </template>
 
 <script setup>
