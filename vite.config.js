@@ -11,6 +11,10 @@ export default defineConfig({
     vueDevTools(),
   ],
   resolve: {
+    build: {
+      outDir: 'public_html',
+      emptyOutDir: true,
+    },
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
