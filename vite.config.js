@@ -5,10 +5,12 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [
+export default defineConfig(({ command, mode }) => {
+  const isDev = mode === 'development' || command === 'serve'
+  return {
+    plugins: [
     vue(),
-    vueDevTools(),
+    isDev ? vueDevTools() : null,
   ],
   resolve: {
     build: {
@@ -18,5 +20,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
+  }}
 })
